@@ -1,0 +1,8 @@
+.site {
+    padding: 2em
+}
+
+.site-content {
+    max-width: 50rem;
+    margin: 0 auto;
+}

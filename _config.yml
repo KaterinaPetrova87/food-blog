@@ -1,0 +1,19 @@
+title: Food Blog
+email: katerina.petrova@abv.bg
+description: >- # this means to ignore newlines until "baseurl:"
+  Recipes & more
+baseurl: "/food-blog" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+# twitter_username: jekyllrb
+github_username:  KaterinaPetrova87
+destination: "docs"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - docs
