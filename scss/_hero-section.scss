@@ -1,0 +1,39 @@
+.hero-section {
+    margin-top: 10.8rem;
+    background: url(../assets/img/header-nutrition.jpg) 50% no-repeat;
+    background-size: cover;
+    height: 20em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hs-text {
+    text-align: center;
+}
+
+.hs-text p {
+    padding-bottom: 0;
+    font-weight: bold;
+    color: white;
+    padding: 0 1em;
+    border-radius: 0.2em;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 0 1.2rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.hs-title1 {
+    font-size: 3em;
+    background: rgb(255, 42, 107);
+}
+
+.hs-title2 {
+    font-size: 2.5em;
+    background: rgb(253, 200, 86);
+}
+
+.hs-title3 {
+    font-size: 2em;
+    background: rgb(189, 222, 100);
+}
