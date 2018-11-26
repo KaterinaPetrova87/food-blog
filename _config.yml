@@ -16,4 +16,9 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - gulpfile.js
   - docs
+  - node_modules
+  - scss
