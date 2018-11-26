@@ -2,6 +2,7 @@
 
 @import url("../fontawesome/css/all.css");
 
+@import url("variables.css");
 @import url("reset.css");
 @import url("typography.css");
 
