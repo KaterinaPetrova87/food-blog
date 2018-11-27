@@ -36,6 +36,9 @@
     flex: 0 0 31%;
     overflow: hidden;
     position: relative;
+    margin-bottom: 1.5rem;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 1rem 0.1rem rgba(0,0,0,0.1);
     transition: height 0.3s ease-in-out;
 }
 
@@ -87,5 +90,18 @@
 
     .post-details span.date {
         font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .post-details {
+        font-weight: normal;
+        padding: 0.2rem;
+    }
+    .post-details span.title {
+        font-size: 70%;
+    }
+    .post-details span.date {
+        font-size: 0.6em;
     }
 }

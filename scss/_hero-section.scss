@@ -46,3 +46,15 @@
     width: 60%;
     animation: slideintitle3 0.5s 1 ease-in-out forwards
 }
+
+@media screen and (max-width: 768px) {
+    .hs-title1 {
+        font-size: 2em;
+    }
+    .hs-title2 {
+        font-size: 1.5em;
+    }
+    .hs-title3 {
+        font-size: 1em;
+    }
+}
