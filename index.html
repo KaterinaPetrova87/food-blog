@@ -4,12 +4,43 @@ layout: site
 
 {% include hero-section.html %}
 
-<h2>index.html</h2>
+<!-- <h2>All Recipes</h2>
 <ul class="listing posts">
     {% for post in site.posts %}
     <li>
         <a href="{{ site.baseurl }}{{ post.url}}">{{ post.title }}</a>
-        {{ post.excerpt }}
     </li>
     {% endfor %}
-</ul>
+</ul> -->
+
+<section class="listing posts">
+    <header class="section-title">
+        <h2>All recipes</h2>
+    </header>
+    {% for post in site.posts %}
+    <article class="post">
+        <a href="{{ site.baseurl }}{{ post.url }}">
+            <div class="img-container">
+                {% assign foundImage = 0 %}
+                {% assign images = post.content | split:"<img
+                    " %}
+                {% for image in images %}
+                  {% if image contains 'src' %}
+          
+                      {% if foundImage == 0 %}
+                          {% assign html = image | split:" />"
+                | first %}
+                <img {{ html }} />
+                {% assign foundImage = 1 %}
+                {% endif %}
+                {% endif %}
+                {% endfor %}
+            </div>
+            <div class="post-details">
+                <span class="date">{{ post.date | date_to_string }}</span>
+                <span class="title">{{ post.title }}</span>
+            </div>
+        </a>
+    </article>
+    {% endfor %}
+</section>
