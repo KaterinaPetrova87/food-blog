@@ -16,7 +16,17 @@
                 <p class="site-description"> {{ site.description }}</p>
             </div>
 
+            <label id="nav-toggle" for="nav-main-toggle" class="fas fa-bars"></label>
+
             <nav class="navigation main">
+                <ul>
+                    <li><a href="{{ site.baseurl }}/">Home</a></li>
+                    <li><a href="{{ site.baseurl }}/about/">About</a></li>
+                    <li><a href="{{ site.baseurl }}/gallery/">Gallery</a></li>
+                    <li><a href="{{ site.baseurl }}/contacts/">Contacts</a></li>
+                </ul>
+            </nav>
+            <nav class="responsive-menu">
                 <ul>
                     <li><a href="{{ site.baseurl }}/">Home</a></li>
                     <li><a href="{{ site.baseurl }}/about/">About</a></li>

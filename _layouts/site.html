@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css" type="text/css">
 </head>
 
-<body>
+<body class="{% if page.type %}{{page.type}} {% endif %}{% if page.title %}{{ page.title | slugify}}{% else %}home{% endif %}">
     <div class="site">
+        <input type="checkbox" id="nav-main-toggle" name="nav-main-toggle">
+
         {% include header.html %}
-        <!-- {% include hero-section.html %} -->
 
         <main class="site-content">
             {{ content }}

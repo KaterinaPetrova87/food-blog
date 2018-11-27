@@ -44,6 +44,8 @@
     font-weight: 600;
 }
 
+
+
 .site-header-bottom {
     display: flex;
     justify-content: space-between;
@@ -70,4 +72,15 @@
     color: rgb(177, 177, 177);
     font-weight: bold;
     letter-spacing: 0.3em;
+}
+
+@media screen and (max-width: 576px) {
+    .site-header .site-header-social {
+        display: none;
+    }
+
+    .site-header .site-header-user-panel {
+        margin: 0 auto;
+        font-size: 120%;
+    }
 }

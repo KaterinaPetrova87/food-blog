@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
 
-<body>
+<body class="home">
     <div class="site">
+        <input type="checkbox" id="nav-main-toggle" name="nav-main-toggle">
+
         <header class="site-header">
         <div class="site-header-top">
             <ul class="site-header-social">
@@ -29,7 +31,17 @@
                 <p class="site-description"> Recipes & more</p>
             </div>
 
+            <label id="nav-toggle" for="nav-main-toggle" class="fas fa-bars"></label>
+
             <nav class="navigation main">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about/">About</a></li>
+                    <li><a href="/gallery/">Gallery</a></li>
+                    <li><a href="/contacts/">Contacts</a></li>
+                </ul>
+            </nav>
+            <nav class="responsive-menu">
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/about/">About</a></li>
@@ -39,13 +51,6 @@
             </nav>
         </div>
     </header>
-        <!-- <section class="hero-section">
-    <div class="hs-text">
-        <p class="hs-title1"><span>Healthy Recipes</span></p>
-        <p class="hs-title2"><span>from the best chefs</span></p>
-        <p class="hs-title3"><span>for all the foodies</span></p>
-    </div>
-</section> -->
 
         <main class="site-content">
             <section class="hero-section">

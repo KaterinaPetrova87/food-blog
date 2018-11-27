@@ -1,3 +1,40 @@
+.responsive-menu {
+    display: none;
+    position: fixed;
+    top: 10rem;
+    left: 0;
+    width: 100%;
+    background: white;
+}
+
+.responsive-menu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.responsive-menu li {
+    display: block;
+    list-style: none outside;
+    border-top: 1px solid rgb(177, 177, 177);
+}
+
+.responsive-menu li:last-of-type {
+    border-bottom: 1px solid rgb(177, 177, 177);
+}
+
+.responsive-menu a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 1em 1.5em;
+    font-weight: 600;
+    color: rgb(71, 71, 71);
+    font-size: 110%;
+}
+
 .navigation ul {
     margin: 0;
     padding: 0;
@@ -18,6 +55,31 @@
     color: rgb(71, 71, 71);
 }
 
-.navigation a:hover {
+.navigation a:hover, .responsive-menu a:hover {
     color: rgb(255, 42, 107);
 }
+
+#nav-main-toggle {
+    display: none;
+ }
+
+ #nav-toggle {
+     display: none;
+ }
+
+ @media screen and (max-width: 768px) {
+     .navigation {display: none};
+     #nav-toggle {
+         display: flex;
+         border: 1px solid #ddd;
+         font-size: 150%;
+         width: 3rem;
+         height: 3rem;
+         align-items: center;
+         justify-content: space-evenly;
+         cursor: pointer;
+     }
+     #nav-main-toggle:checked + .site-header .responsive-menu {
+         display: block;
+     }
+ }
