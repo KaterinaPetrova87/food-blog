@@ -1,0 +1,63 @@
+.contacts {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contacts h2 {
+    width: 100%;
+    color: rgb(71,71,71);
+}
+
+.contacts ul {
+    padding: 0;
+    margin: 0;
+}
+
+.contacts li {
+    list-style: none;
+}
+
+.contacts p {
+    color: rgb(71,71,71);
+}
+
+.contacts-form {
+    width: 60%;
+}
+
+.contacts-info {
+    width: 30%;
+}
+
+.contacts-info h5 {
+    display: inline-block;
+    color: rgb(255, 42, 107);
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid rgb(255, 42, 107);
+}
+
+.contacts-info p {
+    padding-bottom: 0.5em;
+    font-weight: 500;
+    font-size: 0.8em;
+}
+
+.contacts-info li {
+    margin-bottom: 0.5rem;
+}
+
+.contacts-social {
+    margin-top: 2rem;
+}
+
+.contacts-social ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contacts-social a {
+    color: rgb(71,71,71);
+    padding: 0.5rem;
+}
