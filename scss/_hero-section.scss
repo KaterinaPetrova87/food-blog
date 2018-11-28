@@ -11,17 +11,26 @@
 
 .hs-text {
     text-align: center;
+    & p {
+        padding-bottom: 0;
+        font-weight: bold;
+        color: white;
+        padding: 0 1em;
+        border-radius: 0.2em;
+        margin-bottom: 0.5rem;
+        box-shadow: 0 0 1.2rem 0.5rem rgba(0, 0, 0, 0.3);
+    }
 }
 
-.hs-text p {
-    padding-bottom: 0;
-    font-weight: bold;
-    color: white;
-    padding: 0 1em;
-    border-radius: 0.2em;
-    margin-bottom: 0.5rem;
-    box-shadow: 0 0 1.2rem 0.5rem rgba(0, 0, 0, 0.3);
-}
+// .hs-text p {
+//     padding-bottom: 0;
+//     font-weight: bold;
+//     color: white;
+//     padding: 0 1em;
+//     border-radius: 0.2em;
+//     margin-bottom: 0.5rem;
+//     box-shadow: 0 0 1.2rem 0.5rem rgba(0, 0, 0, 0.3);
+// }
 
 .hs-title1 {
     font-size: 2.5em;

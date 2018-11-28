@@ -4,32 +4,49 @@
     flex-wrap: wrap;
     padding: 2rem;
     margin-top: 2rem;
+    & a {
+        display: block;
+        text-decoration: none;
+    }
 }
 
-.listing a {
-    display: block;
-    text-decoration: none;
-}
+// .listing a {
+//     display: block;
+//     text-decoration: none;
+// }
 
 .section-title {
     width: 100%;
     margin-bottom: 2rem;
+    & h2 {
+        color: rgb(71, 71, 71);
+        font-size: 2.5em;
+        &::before {
+            display: block;
+            content: '';
+            height: 7px;
+            width: 4rem;
+            background: rgb(255, 42, 107);
+            margin-bottom: 0.7rem;
+            clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+        }
+    }
 }
 
-.section-title h2 {
-    color: rgb(71, 71, 71);
-    font-size: 2.5em;
-}
+// .section-title h2 {
+//     color: rgb(71, 71, 71);
+//     font-size: 2.5em;
+// }
 
-.section-title h2::before {
-    display: block;
-    content: '';
-    height: 7px;
-    width: 4rem;
-    background: rgb(255, 42, 107);
-    margin-bottom: 0.7rem;
-    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-}
+// .section-title h2::before {
+//     display: block;
+//     content: '';
+//     height: 7px;
+//     width: 4rem;
+//     background: rgb(255, 42, 107);
+//     margin-bottom: 0.7rem;
+//     clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+// }
 
 .post {
     display: block;
@@ -40,11 +57,14 @@
     border-radius: 0.3rem;
     box-shadow: 0 0 1rem 0.1rem rgba(0,0,0,0.1);
     transition: height 0.3s ease-in-out;
+    &:hover .post-details {
+        height: 50%;
+    }
 }
 
-.post:hover .post-details {
-    height: 50%;
-}
+// .post:hover .post-details {
+//     height: 50%;
+// }
 
 .img-container img {
     display: block;
@@ -63,20 +83,31 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    & span {
+        display: block;
+        font-weight: bold;
+        text-shadow: 1px 2px 3px #000000;
+    }
+    & span.title {
+        font-size: 140%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
 }
 
-.post-details span {
-    display: block;
-    font-weight: bold;
-    text-shadow: 1px 2px 3px #000000;
-}
+// .post-details span {
+//     display: block;
+//     font-weight: bold;
+//     text-shadow: 1px 2px 3px #000000;
+// }
 
-.post-details span.title {
-    font-size: 140%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
+// .post-details span.title {
+//     font-size: 140%;
+//     overflow: hidden;
+//     white-space: nowrap;
+//     text-overflow: ellipsis;
+// }
 
 @media screen and (max-width: 768px) {
     .post-details {
