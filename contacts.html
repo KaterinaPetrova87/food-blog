@@ -12,24 +12,17 @@ permalink: /contacts/
         </p>
         <p>We look forward to receiving your email.</p>
         <form action="#">
-            <div class="user-info">
-                <p>
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name">
-                </p>
-                <p>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
-                </p>
-            </div>
-            <p>
-                <label for="subject">Subject</label>
-                <input type="text" name="subject" id="subject">
+            <p class="name">
+                <input type="text" name="name" id="name" placeholder="Name">
             </p>
-            <p>
-                <label for="message">Message</label>
-                <textarea name="message" id="message">
-            </textarea>
+            <p class="email">
+                <input type="email" name="email" id="email" placeholder="Email">
+            </p>
+            <p class="subject">
+                <input type="text" name="subject" id="subject" placeholder="Subject">
+            </p>
+            <p class="message">
+                <textarea name="message" id="message" placeholder="Message"></textarea>
             </p>
             <input type="submit" value="Send">
         </form>

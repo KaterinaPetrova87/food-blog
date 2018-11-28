@@ -6,7 +6,7 @@
 }
 
 .contacts h2 {
-    width: 100%;
+    flex: 0 0 100%;
     color: rgb(71,71,71);
 }
 
@@ -24,11 +24,68 @@
 }
 
 .contacts-form {
-    width: 60%;
+    flex: 0 0 60%;
+    // max-width: 60%;
+}
+
+.contacts-form form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contacts-form form label {
+    display: block;
+}
+
+.contacts-form form .name,
+.contacts-form form .email {
+    flex: 0 0 50%;
+    // max-width: 50%;
+}
+
+.contacts-form .email {
+    text-align: right;
+}
+
+.contacts-form form .subject,
+.contacts-form form .message {
+    flex: 0 0 100%;
+    // max-width: 100%;
+}
+
+.contacts-form form input, 
+.contacts-form form textarea {
+    padding: 0.5rem;
+    background: rgb(239, 243, 247);
+    border: none;
+    outline: none;
+}
+
+.contacts-form form input[name="name"],
+.contacts-form form input[name="email"] {
+    width: 98%;
+}
+
+.contacts-form form input[name="subject"],
+.contacts-form form textarea {
+    width: 100%;
+}
+
+.contacts-form form textarea {
+    height: 10rem;
+}
+
+.contacts-form form input[type="submit"] {
+    background: rgb(255, 42, 107);
+    padding: 0.5rem 5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
 }
 
 .contacts-info {
-    width: 30%;
+    flex: 0 0 30%;
+    // max-width: 30%;
 }
 
 .contacts-info h5 {
@@ -59,5 +116,5 @@
 
 .contacts-social a {
     color: rgb(71,71,71);
-    padding: 0.5rem;
+    margin-right: 1rem;
 }
