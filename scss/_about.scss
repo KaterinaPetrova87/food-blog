@@ -1,47 +1,69 @@
 .about {
-    display: flex;
-    padding: 2rem;
-    justify-content: space-between;
-    align-items: center;
-    & div {
-        width: 47%;
+  $parent: &;
+
+  display: flex;
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  @include mq("tablet") {
+      display: block;
+  }
+  & div {
+    width: 47%;
+    @include mq("tablet") {
+        width: 100%;
     }
+  }
+  @at-root {
+    #{$parent}-text {
+      color: rgb(71, 71, 71);
+    }
+    #{$parent}-img img {
+      width: 100%;
+    }
+  }
 }
 
-.about-text {
-    color: rgb(71, 71, 71);
-}
+// .about-text {
+//     color: rgb(71, 71, 71);
+// }
 
 // .about div {
 //     width: 47%;
 // }
 
-.about-img img {
-    width: 100%;
-}
+// .about-img img {
+//     width: 100%;
+// }
 
 .facts {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 4rem 2rem;
-    background: rgb(239, 243, 247);
-    margin-top: 4rem;
-    & article {
-        width: 23%;
-        text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  background: rgb(239, 243, 247);
+  margin-top: 4rem;
+  @include mq("tablet") {
+    display: block;
+}
+  & article {
+    width: 23%;
+    text-align: center;
+    @include mq("tablet") {
+        width: 100%;
     }
-    & h3 {
-        color: rgb(71, 71, 71);
-        font-size: 3em;
-        padding-bottom: 0;
-        margin: 1rem 0;
-    }
-    & p {
-        padding: 0;
-        color: rgb(71, 71, 71);
-        font-weight: 600;
-    }
+  }
+  & h3 {
+    color: rgb(71, 71, 71);
+    font-size: 3em;
+    padding-bottom: 0;
+    margin: 1rem 0;
+  }
+  & p {
+    padding: 0;
+    color: rgb(71, 71, 71);
+    font-weight: 600;
+  }
 }
 
 // .facts article {
@@ -63,52 +85,92 @@
 // }
 
 .subscribe {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
-    margin-top: 4rem;
-    & div {
-        width: 47%;
+  $parent: &;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 4rem;
+  @include mq("tablet") {
+    display: block;
+}
+  & div {
+    width: 47%;
+    @include mq("tablet") {
+        width: 100%;
     }
+  }
+  @at-root {
+    #{$parent}-text {
+      color: rgb(71, 71, 71);
+      & p {
+        font-style: italic;
+      }
+      & form {
+        display: flex;
+        margin: 2rem 0;
+        & input[type="text"] {
+          width: 70%;
+          padding: 0.3rem 1rem;
+          outline: none;
+          border: none;
+          background: rgb(239, 243, 247);
+        }
+        & input[type="submit"] {
+          width: 30%;
+          padding: 0.3rem;
+          outline: none;
+          background: rgb(255, 42, 107);
+          border: none;
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+    }
+    #{$parent}-img img {
+        width: 100%;
+    }
+  }
 }
 
 // .subscribe div {
 //     width: 47%;
 // }
 
-.subscribe-text {
-    color: rgb(71, 71, 71);
-    & p {
-        font-style: italic;
-    }
-    & form {
-        display: flex;
-        margin: 2rem 0;
-        & input[type="text"] {
-            width: 70%;
-            padding: 0.3rem 1rem;
-            outline: none;
-            border: none;
-            background: rgb(239, 243, 247);
-        }
-        & input[type="submit"] {
-            width: 30%;
-            padding: 0.3rem;
-            outline: none;
-            background: rgb(255, 42, 107);
-            border: none;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-        }
-    }
-    
-}
+// .subscribe-text {
+//     color: rgb(71, 71, 71);
+//     & p {
+//         font-style: italic;
+//     }
+//     & form {
+//         display: flex;
+//         margin: 2rem 0;
+//         & input[type="text"] {
+//             width: 70%;
+//             padding: 0.3rem 1rem;
+//             outline: none;
+//             border: none;
+//             background: rgb(239, 243, 247);
+//         }
+//         & input[type="submit"] {
+//             width: 30%;
+//             padding: 0.3rem;
+//             outline: none;
+//             background: rgb(255, 42, 107);
+//             border: none;
+//             color: white;
+//             font-weight: bold;
+//             cursor: pointer;
+//         }
+//     }
 
-.subscribe-img img {
-    width: 100%;
-}
+// }
+
+// .subscribe-img img {
+//   width: 100%;
+// }
 
 // .subscribe-text form {
 //     display: flex;
@@ -138,28 +200,28 @@
 //     font-style: italic;
 // }
 
-@media screen and (max-width: 768px) {
-    .about {
-        display: block;
-    }
+// @media screen and (max-width: 768px) {
+//   .about {
+//     display: block;
+//   }
 
-    .about div {
-        width: 100%;
-    }
+//   .about div {
+//     width: 100%;
+//   }
 
-    .facts {
-        display: block;
-    }
+//   .facts {
+//     display: block;
+//   }
 
-    .facts article {
-        width: 100%;
-    }
+//   .facts article {
+//     width: 100%;
+//   }
 
-    .subscribe {
-        display: block;
-    }
+//   .subscribe {
+//     display: block;
+//   }
 
-    .subscribe div {
-        width: 100%;
-    }
-}
+//   .subscribe div {
+//     width: 100%;
+//   }
+// }

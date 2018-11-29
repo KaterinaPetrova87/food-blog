@@ -1,4 +1,6 @@
 .site-header {
+  $parent: &;
+
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -8,6 +10,44 @@
   flex-direction: column;
   border-bottom: 1px solid rgb(255, 42, 107);
   z-index: 10;
+  @at-root {
+    #{$parent}-top {
+      display: flex;
+      justify-content: space-between;
+      padding: 1em 2em;
+      background: rgb(255, 42, 107);
+      color: white;
+      & ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        width: 20%;
+        justify-content: space-between;
+        align-items: center;
+      }
+      & li {
+        display: block;
+        list-style: none outside;
+      }
+      & a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+    #{$parent}-social a {
+      display: block;
+    }
+    #{$parent}-user-panel a {
+      font-weight: 600;
+    }
+    #{$parent}-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 2em;
+      background: white;
+    }
+  }
   & .site-header-social {
     @include mq("phone") {
       display: none;
@@ -21,29 +61,29 @@
   }
 }
 
-.site-header-top {
-  display: flex;
-  justify-content: space-between;
-  padding: 1em 2em;
-  background: rgb(255, 42, 107);
-  color: white;
-  & ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    width: 20%;
-    justify-content: space-between;
-    align-items: center;
-  }
-  & li {
-    display: block;
-    list-style: none outside;
-  }
-  & a {
-    text-decoration: none;
-    color: white;
-  }
-}
+// .site-header-top {
+//   display: flex;
+//   justify-content: space-between;
+//   padding: 1em 2em;
+//   background: rgb(255, 42, 107);
+//   color: white;
+//   & ul {
+//     margin: 0;
+//     padding: 0;
+//     display: flex;
+//     width: 20%;
+//     justify-content: space-between;
+//     align-items: center;
+//   }
+//   & li {
+//     display: block;
+//     list-style: none outside;
+//   }
+//   & a {
+//     text-decoration: none;
+//     color: white;
+//   }
+// }
 
 // .site-header-top ul {
 //     margin: 0;
@@ -64,21 +104,21 @@
 //     color: white;
 // }
 
-.site-header-social a {
-  display: block;
-}
+// .site-header-social a {
+//   display: block;
+// }
 
-.site-header-user-panel a {
-  font-weight: 600;
-}
+// .site-header-user-panel a {
+//   font-weight: 600;
+// }
 
-.site-header-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em 2em;
-  background: white;
-}
+// .site-header-bottom {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding: 1em 2em;
+//   background: white;
+// }
 
 .site-branding p {
   padding-bottom: 0;
