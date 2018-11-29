@@ -112,20 +112,22 @@
         margin: 2rem 0;
         & input[type="text"] {
           width: 70%;
-          padding: 0.3rem 1rem;
+          padding: 0.5rem 1rem;
           outline: none;
-          border: none;
+          border: 2px solid rgb(239, 243, 247);;
           background: rgb(239, 243, 247);
         }
         & input[type="submit"] {
           width: 30%;
-          padding: 0.3rem;
+          padding: 0.5rem;
           outline: none;
           background: rgb(255, 42, 107);
-          border: none;
+          border: 2px solid rgb(255, 42, 107);
           color: white;
           font-weight: bold;
           cursor: pointer;
+          transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
+          @include btn(rgb(255, 42, 107), rgb(239, 243, 247));
         }
       }
     }

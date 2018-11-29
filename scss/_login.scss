@@ -42,8 +42,8 @@
     border: 2px solid rgb(177, 177, 177);
     transition: border-color 0.3s ease;
     &:focus {
-        border-color: rgb(255, 42, 107);
-      }
+      border-color: rgb(255, 42, 107);
+    }
   }
   & input[type="submit"] {
     border: none;
@@ -56,6 +56,9 @@
     font-weight: bold;
     outline: none;
     cursor: pointer;
+    transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out,
+      color 0.2s ease-in-out;
+    @include btn(rgb(255, 42, 107), rgb(239, 243, 247));
   }
 }
 

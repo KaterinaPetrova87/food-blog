@@ -69,6 +69,8 @@
           font-weight: bold;
           cursor: pointer;
           color: white;
+          transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
+          @include btn(rgb(255, 42, 107), rgb(239, 243, 247));
         }
       }
     }
