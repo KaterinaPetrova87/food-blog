@@ -56,12 +56,6 @@
     animation: slideintitle3 0.5s 1 ease-in-out forwards
 }
 
-@for $i from 1 through 3 {
-    .hs-title#{$i} {
-    animation-delay: $i * 0.05s;
-    }
-  }
-
 @media screen and (max-width: 768px) {
     .hs-title1 {
         font-size: 2em;
