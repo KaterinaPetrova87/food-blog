@@ -33,6 +33,9 @@
 // }
 
 .hs-title1 {
+    @include mq("tablet") {
+        font-size: 2em;
+    }
     font-size: 2.5em;
     background: rgb(255, 42, 107);
     z-index: 3;
@@ -40,6 +43,9 @@
 }
 
 .hs-title2 {
+    @include mq("tablet") {
+        font-size: 1.5em;
+    }
     font-size: 2em;
     background: rgb(253, 200, 86);
     z-index: 2;
@@ -48,6 +54,9 @@
 }
 
 .hs-title3 {
+    @include mq("tablet") {
+        font-size: 1em;
+    }
     font-size: 1.5em;
     background: rgb(189, 222, 100);
     z-index: 1;
@@ -56,14 +65,14 @@
     animation: slideintitle3 0.5s 1 ease-in-out forwards
 }
 
-@media screen and (max-width: 768px) {
-    .hs-title1 {
-        font-size: 2em;
-    }
-    .hs-title2 {
-        font-size: 1.5em;
-    }
-    .hs-title3 {
-        font-size: 1em;
-    }
-}
+// @media screen and (max-width: 768px) {
+//     .hs-title1 {
+//         font-size: 2em;
+//     }
+//     .hs-title2 {
+//         font-size: 1.5em;
+//     }
+//     .hs-title3 {
+//         font-size: 1em;
+//     }
+// }

@@ -1,38 +1,38 @@
 .responsive-menu {
-    display: none;
-    position: fixed;
-    top: 10rem;
-    left: 0;
-    width: 100%;
-    background: white;
-    & ul {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        z-index: 1000;
+  display: none;
+  position: fixed;
+  top: 10rem;
+  left: 0;
+  width: 100%;
+  background: white;
+  & ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    z-index: 1000;
+  }
+  & li {
+    display: block;
+    list-style: none outside;
+    border-top: 1px solid rgb(177, 177, 177);
+    &:last-of-type {
+      border-bottom: 1px solid rgb(177, 177, 177);
     }
-    & li {
-        display: block;
-        list-style: none outside;
-        border-top: 1px solid rgb(177, 177, 177);
-        &:last-of-type {
-            border-bottom: 1px solid rgb(177, 177, 177);
-        }
+  }
+  & a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 1em 1.5em;
+    font-weight: 600;
+    color: rgb(71, 71, 71);
+    font-size: 110%;
+    &:hover {
+      color: rgb(255, 42, 107);
     }
-    & a {
-        display: block;
-        text-align: center;
-        text-decoration: none;
-        padding: 1em 1.5em;
-        font-weight: 600;
-        color: rgb(71, 71, 71);
-        font-size: 110%;
-        &:hover {
-            color: rgb(255, 42, 107);
-        }
-    }
+  }
 }
 
 // .responsive-menu ul {
@@ -65,54 +65,71 @@
 // }
 
 .navigation {
-    & ul {
-        margin: 0;
-        padding: 0;
-        display: flex;
+  @include mq("tablet") {
+    display: none;
+  }
+  & ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  & li {
+    display: block;
+    list-style: none outside;
+  }
+  & a {
+    display: block;
+    text-decoration: none;
+    padding: 1em 1.5em;
+    margin-left: 1em;
+    font-weight: 600;
+    color: rgb(71, 71, 71);
+    &:hover {
+      color: rgb(255, 42, 107);
     }
-    & li {
-        display: block;
-        list-style: none outside;
-    }
-    & a {
-        display: block;
-        text-decoration: none;
-        padding: 1em 1.5em;
-        margin-left: 1em;
-        font-weight: 600;
-        color: rgb(71, 71, 71);
-        &:hover {
-            color: rgb(255, 42, 107);
-        }
-    }
+  }
 }
-
 
 // .navigation a:hover, .responsive-menu a:hover {
 //     color: rgb(255, 42, 107);
 // }
 
 #nav-main-toggle {
-    display: none;
- }
+  display: none;
+  &:checked + .site-header .responsive-menu {
+    @include mq("tablet") {
+      display: block;
+    }
+  }
+}
 
- #nav-toggle {
-     display: none;
- }
+#nav-toggle {
+  display: none;
+  @include mq("tablet") {
+    display: flex;
+    border: 1px solid #ddd;
+    font-size: 150%;
+    width: 3rem;
+    height: 3rem;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+  }
+}
 
- @media screen and (max-width: 768px) {
-     .navigation {display: none};
-     #nav-toggle {
-         display: flex;
-         border: 1px solid #ddd;
-         font-size: 150%;
-         width: 3rem;
-         height: 3rem;
-         align-items: center;
-         justify-content: space-evenly;
-         cursor: pointer;
-     }
-     #nav-main-toggle:checked + .site-header .responsive-menu {
-         display: block;
-     }
- }
+//  @media screen and (max-width: 768px) {
+//      .navigation {display: none};
+//      #nav-toggle {
+//          display: flex;
+//          border: 1px solid #ddd;
+//          font-size: 150%;
+//          width: 3rem;
+//          height: 3rem;
+//          align-items: center;
+//          justify-content: space-evenly;
+//          cursor: pointer;
+//      }
+//      #nav-main-toggle:checked + .site-header .responsive-menu {
+//          display: block;
+//      }
+//  }
