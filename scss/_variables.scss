@@ -5,3 +5,13 @@
 
 	--spacing-site: 2rem;
 }
+
+%pseudo {
+	display: block;
+	content: '';
+	height: 7px;
+	width: 4rem;
+	background: rgb(255, 42, 107);
+	margin-bottom: 0.7rem;
+	clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+}

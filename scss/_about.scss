@@ -6,12 +6,15 @@
   justify-content: space-between;
   align-items: center;
   @include mq("tablet") {
-      display: block;
+    display: block;
+  }
+  h2::before {
+    @extend %pseudo;
   }
   & div {
     width: 47%;
     @include mq("tablet") {
-        width: 100%;
+      width: 100%;
     }
   }
   @at-root {
@@ -45,12 +48,12 @@
   margin-top: 4rem;
   @include mq("tablet") {
     display: block;
-}
+  }
   & article {
     width: 23%;
     text-align: center;
     @include mq("tablet") {
-        width: 100%;
+      width: 100%;
     }
   }
   & h3 {
@@ -94,11 +97,14 @@
   margin-top: 4rem;
   @include mq("tablet") {
     display: block;
-}
+  }
+  h2::before {
+      @extend %pseudo;
+  }
   & div {
     width: 47%;
     @include mq("tablet") {
-        width: 100%;
+      width: 100%;
     }
   }
   @at-root {
@@ -114,7 +120,7 @@
           width: 70%;
           padding: 0.5rem 1rem;
           outline: none;
-          border: 2px solid rgb(239, 243, 247);;
+          border: 2px solid rgb(239, 243, 247);
           background: rgb(239, 243, 247);
         }
         & input[type="submit"] {
@@ -126,13 +132,14 @@
           color: white;
           font-weight: bold;
           cursor: pointer;
-          transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
+          transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out,
+            color 0.2s ease-in-out;
           @include btn(rgb(255, 42, 107), rgb(239, 243, 247));
         }
       }
     }
     #{$parent}-img img {
-        width: 100%;
+      width: 100%;
     }
   }
 }
