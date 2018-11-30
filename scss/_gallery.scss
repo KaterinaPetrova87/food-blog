@@ -1,0 +1,42 @@
+.site-gallery {
+  padding: 2rem;
+  h2 {
+    margin-bottom: 2rem;
+    color: rgb(71, 71, 71);
+    &::before {
+      @extend %pseudo;
+    }
+  }
+}
+
+.gallery {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery li {
+    display: block;
+    position: relative;
+    padding-top: 100%;
+    overflow: hidden;
+}
+
+.gallery a {
+    display: block;
+    position: absolute;
+    top:0; left:0; bottom:0; right: 0;
+    background: red;
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top:50%; left:0;
+    transform: translateY(-50%);
+    box-shadow: -2px 2px 10px 0px;
+  }
